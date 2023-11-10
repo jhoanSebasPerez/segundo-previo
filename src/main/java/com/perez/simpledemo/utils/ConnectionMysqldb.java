@@ -10,7 +10,7 @@ public class ConnectionMysqldb {
     private static final String DB_URL = "jdbc:mysql://localhost:3306/system";
 
     /** SET YOUR USERNAME NAME*/
-    private static final String DB_USER = "YOUR_USERNAME";
+    private static final String DB_USER = "root";
 
     /** SET YOUR PASSWORD*/
     private static final String DB_PASSWORD = "admin1234";

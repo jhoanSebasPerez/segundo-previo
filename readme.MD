@@ -21,7 +21,7 @@ Before running this project you need to have installed:
 * Create a new connection
 * Create a new schema and name it `system`
 * Create a new user and grant privileges to the new schema
-* **Open `ConnectionMysqldb` class from **utils** package and change the properties (constants inside class) 
+* **Open `ConnectionMysqldb` class from `src/main/java/com.perez.simpledemo/utils` package and change the properties (constants inside class) 
 with your credentials:**
   * DB_USER -> your username
   * DB_PASSWORD -> your password 
