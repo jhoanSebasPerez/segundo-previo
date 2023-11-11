@@ -1,5 +1,7 @@
-
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!-- import CountryList -->
+<%@ page import="com.perez.simpledemo.utils.CountryList" %>
 
 <c:import url="layout.jsp" />
 
@@ -49,24 +51,24 @@
                     <label class="block text-gray-700 font-bold mb-2" for="country">
                         Country
                     </label>
-                    <input
-                            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="country"
-                            type="text"
-                            placeholder="Colombia"
-                            name="country"
-                            value="${user.country}"
-                    />
+                    <select id="country" name="country" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option>${user.country ne null ? user.country : "Select your country"}</option>
+                        <c:forEach items="${CountryList.getAllCountries()}" var="country">
+                            <option value="${country}">
+                                ${country}
+                            </option>
+                        </c:forEach>
+                    </select>
                 </div>
 
 
                 <div class="flex items-center justify-between">
                     <button
                             onclick={window.location.href = "index.jsp"}
-                            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                            type="submit"
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                    type="submit"
                     >
-                        Submit
+                    Submit
                     </button>
                 </div>
             </form>
