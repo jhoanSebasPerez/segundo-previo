@@ -1,30 +1,20 @@
-# Simple web application to handle a list of users
-implement CRUD operations on a list of users using Java EE technologies
+# Simple Demo App
+This is a simple demo app to show simple CRUD operations over a list of users.
+By using Servlets and JSP, and Mysql as database.
 
-## Getting Started
-Before running this project you need to have installed:
-* [Java 17](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html)
-* [Maven](https://maven.apache.org/download.cgi)
-* [Tomcat server 10](https://tomcat.apache.org/download-10.cgi)
-* [MySQL](https://dev.mysql.com/downloads/mysql/)
-* [MySQL Workbench](https://dev.mysql.com/downloads/workbench/)
+## Requirements
+- Git installed on your machine (https://git-scm.com/downloads)
+- Docker installed on your machine (https://docs.docker.com/install/)
 
-### I highly recommend using [IntelliJ IDEA](https://www.jetbrains.com/idea/download/#section=windows) as IDE.
+## Steps to run the app
+- Clone the repository to your machine
+- Open a terminal and go to the root folder of the project `users-crud-servlet-jsp`
+- Run the following command to build the docker image: `docker-compose build`
+- Run the following command to start the docker container: `docker-compose up`
+- Open a browser and go to the following url: `http://localhost:8080/simple-demo/`
 
-### Setup Tomcat server in IntelliJ IDEA:
-* Go to `Run` -> `Edit Configurations...`
-* Click on `+` -> `Tomcat Server` -> `Local`
-* Select `Configure...` -> `Tomcat Home` -> `...` -> Select the folder where you installed Tomcat server
-
-### Setup MySQL database:
-* Open MySQL Workbench
-* Create a new connection
-* Create a new schema and name it `system`
-* Create a new user and grant privileges to the new schema
-* **Open `ConnectionMysqldb` class from `src/main/java/com.perez.simpledemo/utils` package and change the properties (constants inside class) 
-with your credentials:**
-  * DB_USER -> your username
-  * DB_PASSWORD -> your password 
-
-
-### Don't forget install Maven dependencies before running the project.
+### Connection parameters (if you want to connect to Mysql client)
+- Database URL: `jdbc:mysql://localhost:3307/sistema`
+- Database name: `sistema`
+- Database user: `prueba`
+- Database password: `test1234`
