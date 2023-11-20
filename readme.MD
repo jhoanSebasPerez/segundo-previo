@@ -20,3 +20,6 @@ By using Servlets and JSP, and Mysql as database.
 - Database name: `postgres`
 - Database user: `postgres`
 - Database password: `-GvFte*ze9Phg7w`
+
+## If you have any question, please contact me
+- Email: `jhoansebastianpa@ufps.edu.co`
