@@ -1,6 +1,4 @@
-# Simple Demo App
-This is a simple demo app to show simple CRUD operations over a list of users.
-By using Servlets and JSP, and Mysql as database.
+# Segundo Previo - Web programming II 2023
 
 ## Requirements
 - Git installed on your machine (https://git-scm.com/downloads)

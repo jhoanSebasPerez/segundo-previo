@@ -16,6 +16,18 @@ public class BillDAO {
 
     private final ConnectionDB connectionDB = new ConnectionPostgresDB();
 
+    public void delete(int id){
+        try{
+            Connection connection = connectionDB.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement("DELETE FROM bill WHERE id = ?");
+            preparedStatement.setInt(1, id);
+
+            preparedStatement.executeUpdate();
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
+
     public void save(Bill bill){
         try{
             Connection connection = connectionDB.getConnection();

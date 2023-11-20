@@ -22,7 +22,7 @@
             <p class="text-base">${bill.value}</p>
           </div>
           <div class="flex justify-end mt-4">
-            <a href="" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded">Info</a>
+            <a href="${pageContext.request.contextPath}/movimientos?action=delete&id=${bill.id}" class="bg-red-500 hover:bg-red-600 text-white py-1 px-4 rounded">Delete</a>
           </div>
         </li>
       </c:forEach>

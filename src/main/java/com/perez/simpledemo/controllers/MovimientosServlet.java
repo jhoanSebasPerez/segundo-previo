@@ -20,13 +20,24 @@ public class MovimientosServlet extends HttpServlet {
     private UserDAO userDAO = new UserDAO();
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = (String) request.getSession().getAttribute("username");
-        Integer userId = userDAO.getUserByUsername(username).getId();
+        String action = request.getParameter("action");
 
-        List<Bill> billsFromUser = billDAO.getBillsByUserId(userId);
+        System.out.println(action);
 
-        request.setAttribute("bills", billsFromUser);
-        request.getRequestDispatcher("/movimientos.jsp").forward(request, response);
+        if(action!= null && action.equals("delete")){
+            String billId = request.getParameter("id");
+            billDAO.delete(Integer.parseInt(billId));
+            response.sendRedirect(request.getContextPath() + "/movimientos");
+        }
+        else{
+            String username = (String) request.getSession().getAttribute("username");
+            Integer userId = userDAO.getUserByUsername(username).getId();
+
+            List<Bill> billsFromUser = billDAO.getBillsByUserId(userId);
+
+            request.setAttribute("bills", billsFromUser);
+            request.getRequestDispatcher("/movimientos.jsp").forward(request, response);
+        }
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -55,4 +66,6 @@ public class MovimientosServlet extends HttpServlet {
         response.sendRedirect(request.getContextPath() + "/movimientos");
 
     }
+
+
 }
