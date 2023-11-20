@@ -10,10 +10,10 @@ public class User {
 
     private Integer id;
 
-    private String name;
+    private String username;
 
     private String email;
 
-    private String country;
+    private String pass;
 
 }
