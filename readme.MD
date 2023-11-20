@@ -15,8 +15,8 @@ By using Servlets and JSP, and Mysql as database.
 - Run the following command to start the docker container: `docker-compose up`
 - Open a browser and go to the following url: `http://localhost:8080/simple-demo/`
 
-### Connection parameters (if you want to connect to Mysql client)
-- Database URL: `jdbc:mysql://localhost:3307/sistema`
-- Database name: `sistema`
-- Database user: `prueba`
-- Database password: `test1234`
+### Connection parameters (if you want to connect to Postgres client)
+- Database URL: `jdbc:postgresql://db.eigzbbtaqbpehuzcsjpj.supabase.co:5432/postgres`
+- Database name: `postgres`
+- Database user: `postgres`
+- Database password: `-GvFte*ze9Phg7w`

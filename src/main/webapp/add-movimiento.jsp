@@ -5,18 +5,18 @@
 
 <section class="p-4">
     <h2 class="text-2xl font-bold mb-4">Registro de movimiento</h2>
-    <form>
+    <form method="post" action="movimientos">
         <div class="mb-4">
             <label for="description" class="block">Description:</label>
             <input type="text" id="description" name="description" class="border p-2 w-full">
         </div>
         <div class="flex items-center mb-4">
             <label for="income" class="mr-2">
-                <input type="radio" id="income" name="movementType" value="Income">
+                <input type="radio" id="income" name="movementType" value="1">
                 Income
             </label>
             <label for="expense" class="mr-2">
-                <input type="radio" id="expense" name="movementType" value="Expense">
+                <input type="radio" id="expense" name="movementType" value="2">
                 Expense
             </label>
         </div>

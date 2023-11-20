@@ -21,14 +21,14 @@
           <div class="w-2/3 text-right">
             <p class="text-base">${bill.value}</p>
           </div>
+          <div class="flex justify-end mt-4">
+            <a href="" class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded">Info</a>
+          </div>
         </li>
       </c:forEach>
       <!-- Add more list items here -->
     </ul>
 
-    <div class="flex justify-end mt-4">
-      <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">See More</button>
-    </div>
 
     <div class="flex justify-end mt-4">
       <a href="./add-movimiento.jsp" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">Add New Movement</a>

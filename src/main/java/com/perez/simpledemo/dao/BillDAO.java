@@ -16,6 +16,22 @@ public class BillDAO {
 
     private final ConnectionDB connectionDB = new ConnectionPostgresDB();
 
+    public void save(Bill bill){
+        try{
+            Connection connection = connectionDB.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement("INSERT INTO bill (date_bill, user_id, value, type, observation) VALUES (?, ?, ?, ?, ?)");
+            preparedStatement.setDate(1, java.sql.Date.valueOf(bill.getDateBill()));
+            preparedStatement.setInt(2, bill.getUserId());
+            preparedStatement.setFloat(3, bill.getValue());
+            preparedStatement.setInt(4, bill.getType());
+            preparedStatement.setString(5, bill.getObservation());
+
+            preparedStatement.executeUpdate();
+        }catch (SQLException e){
+            throw new RuntimeException(e);
+        }
+    }
+
     public List<Bill> getBillsByUserId(int userId){
         List<Bill> bills = new ArrayList<>();
 
